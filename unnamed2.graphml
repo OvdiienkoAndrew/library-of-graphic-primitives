@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <!--Created by yEd 3.22-->
+  <key attr.name="Description" attr.type="string" for="graph" id="d0"/>
+  <key for="port" id="d1" yfiles.type="portgraphics"/>
+  <key for="port" id="d2" yfiles.type="portgeometry"/>
+  <key for="port" id="d3" yfiles.type="portuserdata"/>
+  <key attr.name="url" attr.type="string" for="node" id="d4"/>
+  <key attr.name="description" attr.type="string" for="node" id="d5"/>
+  <key for="node" id="d6" yfiles.type="nodegraphics"/>
+  <key for="graphml" id="d7" yfiles.type="resources"/>
+  <key attr.name="url" attr.type="string" for="edge" id="d8"/>
+  <key attr.name="description" attr.type="string" for="edge" id="d9"/>
+  <key for="edge" id="d10" yfiles.type="edgegraphics"/>
+  <graph edgedefault="directed" id="G">
+    <data key="d0"/>
+    <node id="n0">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="700.0" x="441.0" y="388.0"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="42.572265625" x="328.7138671875" xml:space="preserve" y="5.93359375">Shape:
+<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n1">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="100.0" width="700.0" x="441.0" y="418.0"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="102.9296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="92.470703125" x="303.7646484375" xml:space="preserve" y="-1.46484375">
+1) Властивості:
+	- double x, y;
+	-  int r, g, b;
+	- bool visible;
+	- int sizeTrail;
+
+<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="700.0" width="700.0" x="441.0" y="518.0"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="611.7109375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="661.626953125" x="19.1865234375" xml:space="preserve" y="44.14453125">2) Методи:
+
+	- Shape();
+	- Shape(double x, double y, int r, int g, int b, bool visible);
+
+	- virtual void draw(Graphics &amp;graphics);
+	- virtual void drawTrail(Graphics &amp;graphics);
+
+	- virtual void show(Graphics &amp;graphics);
+	- virtual void hide(Graphics &amp;graphics);
+
+	- virtual void move(double dx, double dy, Graphics &amp;graphics);
+
+	- virtual void resize(double factor, Graphics &amp;graphics);
+
+	- virtual bool intersects(Shape &amp;other);
+	- virtual bool intersects(Segment &amp;other);
+	- virtual bool intersects(Circle &amp;other);
+	- virtual bool intersects(Rectangle &amp;other);
+	- virtual bool intersects(Triangle &amp;other);
+
+	- virtual std::ifstream &amp;read(std::ifstream &amp;is);
+	- virtual std::ofstream &amp;write(std::ofstream &amp;os);
+
+	- friend std::ofstream &amp;operator&lt;&lt;(std::ofstream &amp;os, Shape &amp;shape);
+	- friend std::ifstream &amp;operator&gt;&gt;(std::ifstream &amp;os, Shape &amp;shape);
+
+	- virtual void addListSegment(double x, double y, double x2, double y2, int r, int g, int b);
+	- virtual void addListCircle(double x, double y, double radius, int r, int g, int b);
+	- virtual void addListRectangle(double x, double y, double width, double height, int r, int g, int b);
+	- virtual void addListTriangle(double x, double y, double x2, double y2, double x3, double y3, int r, int g, int b);
+
+	- virtual void addList(Graphics &amp;graphics);
+	- virtual void addShape(Shape *shape);
+	- virtual void removeShape(Shape *shape);
+
+	- virtual void findTheInterects(Shape **shape, int shapeSize);
+   	- virtual void addGroup(Group *shape);
+   	- virtual void removeGroup(Group *group);
+
+	- void setColorRed(int r);
+	- void setColorGreen(int g);
+	- void setColorBlue(int b);
+<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="700.0" x="1210.735300471297" y="388.0"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.779296875" x="329.6103515625" xml:space="preserve" y="5.93359375">Circle:
+<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n4">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="300.0" width="700.0" x="1210.735300471297" y="417.99999999999994"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="300.7890625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="109.38671875" x="295.306640625" xml:space="preserve" y="-0.39453125">
+1) Властивості:
+	- double radius;
+
+	- struct ListCircle
+	{
+	double x;
+	double y;
+	double radius;
+	int r;
+	int g;
+	int b;
+	};
+
+	- struct List
+	{
+	ListCircle circle;
+	List *next;
+	};
+
+	List *Head;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n5">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="500.0" width="700.0" x="1210.735300471297" y="718.0"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="399.71875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="434.142578125" x="132.9287109375" xml:space="preserve" y="50.140625">2) Методи:
+
+	- void addList(Graphics &amp;graphics);
+	
+	- Circle();
+	- Circle(double x, double y, double radius, int r, int g, int b, bool visible);
+	- ~Circle();
+
+	- void addListCircle(double x, double y, double radius, int r, int g, int b);
+
+	- void draw(Graphics &amp;graphics);
+	- void drawTrail(Graphics &amp;graphics);
+	- void hide(Graphics &amp;graphics);
+
+	- void move(double dx, double dy, Graphics &amp;graphics);
+	- void resize(double factor, Graphics &amp;graphics);
+
+	- std::ifstream &amp;read(std::ifstream &amp;is);
+	- std::ofstream &amp;write(std::ofstream &amp;os);
+
+	- void setRadius(double radius);
+	- double getRadius();
+
+	- bool intersects(Shape &amp;other);
+	- bool intersects(Segment &amp;other);
+	- bool intersects(Circle &amp;other);
+	- bool intersects(Rectangle &amp;other);
+	- bool intersects(Triangle &amp;other);
+<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n6">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="700.0" x="1989.5840565783294" y="400.63295305861607"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="58.251953125" x="320.8740234374998" xml:space="preserve" y="5.93359375">Segment:
+<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n7">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="400.0" width="700.0" x="1989.5840565783294" y="430.63295305861607"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="329.0546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="136.427734375" x="281.7861328124998" xml:space="preserve" y="35.47265625">
+1) Властивості:
+
+	- double x2, y2;
+
+	- struct ListSegment
+	{
+	double x;
+	double y;
+	double x2;
+	double y2;
+	int r;
+	int g;
+	int b;
+	};
+
+	- struct List
+	{
+	ListSegment segment;
+	List *next;
+	};
+
+	- List *Head;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n8">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="500.0" width="700.0" x="1989.5840565783294" y="830.6329530586161"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="442.1171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="495.765625" x="102.11718749999977" xml:space="preserve" y="28.94140625">2) Методи:
+
+
+	- void addList(Graphics &amp;graphics);
+	- Segment();
+	- Segment(double x, double y, double x2, double y2);
+	- Segment(double x, double y, double x2, double y2, int r, int g, int b, bool visible);
+	- ~Segment();
+
+	- void addListSegment(double x, double y, double x2, double y2, int r, int g, int b);
+
+	- void draw(Graphics &amp;graphics);
+	- void drawTrail(Graphics &amp;graphics);
+	- void hide(Graphics &amp;graphics);
+	- void move(double dx, double dy, Graphics &amp;graphics);
+	- void resize(double factor, Graphics &amp;graphics);
+
+	- std::ifstream &amp;read(std::ifstream &amp;is);
+	- std::ofstream &amp;write(std::ofstream &amp;os);
+
+	- void setX2(double x2);
+	- void setY2(double y2);
+
+	- double getX2();
+	- double getY2();
+
+	- bool intersects(Shape &amp;other);
+	- bool intersects(Segment &amp;other);
+	- bool intersects(Circle &amp;other);
+	- bool intersects(Rectangle &amp;other);
+	- bool intersects(Triangle &amp;other);<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n9">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="700.0" x="2815.4010351209245" y="400.63295305861595"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="64.416015625" x="317.7919921875" xml:space="preserve" y="5.93359375">Rectangle:
+<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n10">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="400.0" width="700.0" x="2815.4010351209245" y="430.63295305861595"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="329.0546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="146.423828125" x="276.7880859375" xml:space="preserve" y="35.47265625">
+1) Властивості:
+
+	- double width, height;
+
+	- struct ListRectangle
+	{
+	double x;
+	double y;
+	double width;
+	double height;
+	int r;
+	int g;
+	int b;
+	};
+
+	- struct List
+	{
+	ListRectangle rectangle;
+	List *next;
+	};
+
+	- List *Head;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n11">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="500.0" width="700.0" x="2815.4010351209245" y="830.632953058616"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="456.25" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="542.34765625" x="78.826171875" xml:space="preserve" y="21.874999999999886">2) Методи:
+
+
+	- void addList(Graphics &amp;graphics);
+	
+	- Rectangle();
+	- Rectangle(double x, double y, double width, double height, int r, int g, int b, bool visible);
+	- ~Rectangle();
+
+	- void addListRectangle(double x, double y, double width, double height, int r, int g, int b);
+
+	- void draw(Graphics &amp;graphics);
+	- void drawTrail(Graphics &amp;graphics);
+	
+	- void hide(Graphics &amp;graphics);
+	- void move(double dx, double dy, Graphics &amp;graphics);
+	- void resize(double factor, Graphics &amp;graphics);
+
+	- std::ifstream &amp;read(std::ifstream &amp;is);
+	- std::ofstream &amp;write(std::ofstream &amp;os);
+
+	- void setWidth(double width);
+	- void setHeight(double height);
+
+	- double getWidth();
+	- double getHeight();
+
+	- bool intersects(Shape &amp;other);
+	- bool intersects(Segment &amp;other);
+	- bool intersects(Circle &amp;other);
+	- bool intersects(Rectangle &amp;other);
+	- bool intersects(Triangle &amp;other);<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n12">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="700.0" x="3614.6435788856634" y="400.63295305861595"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="55.474609375" x="322.2626953125" xml:space="preserve" y="5.93359375">Triangle:
+<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n13">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="400.0" width="700.0" x="3614.6435788856634" y="430.63295305861595"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="357.3203125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="146.599609375" x="276.7001953125" xml:space="preserve" y="21.33984375">
+1) Властивості:
+
+	- double x2, y2, x3, y3;
+
+	- struct ListTriangle
+	{
+	double x;
+	double y;
+	double x2;
+	double y2;
+	double x3;
+	double y3;
+	int r;
+	int g;
+	int b;
+	};
+
+	- struct List
+	{
+	ListTriangle triangle;
+	List *next;
+	};
+
+	- List *Head;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n14">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="600.0" width="700.0" x="3614.643578885664" y="830.632953058616"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="512.78125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="624.73046875" x="37.634765625" xml:space="preserve" y="43.609374999999886">2) Методи:
+
+
+	- void addList(Graphics &amp;graphics);
+
+	- Triangle();
+	- Triangle(double x, double y, double x2, double y2, double x3, double y3, int r, int g, int b, bool visible);
+	- ~Triangle();
+
+	- void addListTriangle(double x, double y, double x2, double y2, double x3, double y3, int r, int g, int b);
+
+	- void draw(Graphics &amp;graphics);
+	- void drawTrail(Graphics &amp;graphics);
+
+	- void hide(Graphics &amp;graphics);
+	- void move(double dx, double dy, Graphics &amp;graphics);
+	- void resize(double factor, Graphics &amp;graphics);
+
+	- std::ifstream &amp;read(std::ifstream &amp;is);
+	- std::ofstream &amp;write(std::ofstream &amp;os);
+
+	- void setX2(double x2);
+	- void setY2(double y2);
+	- void setX3(double x3);
+	- void setY3(double y3);
+
+	- double getX2();
+	- double getY2();
+	- double getX3();
+	- double getY3();
+
+	- bool intersects(Shape &amp;other);
+	- bool intersects(Segment &amp;other);
+	- bool intersects(Circle &amp;other);
+	- bool intersects(Rectangle &amp;other);
+	- bool intersects(Triangle &amp;other);<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n15">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="700.0" x="4508.953815193909" y="400.63295305861595"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="43.75" x="328.125" xml:space="preserve" y="5.93359375">Group:
+<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n16">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="100.0" width="700.0" x="4508.953815193909" y="430.63295305861595"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="88.796875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="113.365234375" x="293.3173828125" xml:space="preserve" y="5.6015625">
+1) Властивості:
+
+	- Shape **Shapes;
+	- int captain;
+	- int size;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n17">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="500.0" width="700.0" x="4508.953815193909" y="530.632953058616"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="371.453125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="334.5390625" x="182.73046875" xml:space="preserve" y="64.2734375">2) Методи:
+
+	- void resize(int newCaptain);
+
+	- Group();
+	- ~Group();
+	
+	- void addShape(Shape *shape);
+	- void removeShape(Shape *shape);
+
+	- void setV(bool visible);
+	- void setVisible();
+
+	- void draw(Graphics &amp;graphics);
+	- void drawTrail(Graphics &amp;graphics);
+
+	- void move(double dx, double dy, Graphics &amp;graphics);
+
+	- void addList(Graphics &amp;graphics);
+	- int getSize();
+
+	- bool intersects(Shape &amp;other);
+	- void findTheInterects(Shape **shapes, int size2);
+	- void resize(double factor, Graphics &amp;graphics);
+
+	- std::ofstream &amp;write(std::ofstream &amp;os);<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n18">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="700.0" x="5338.9074072455205" y="400.63295305861595"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="50.212890625" x="324.8935546875" xml:space="preserve" y="5.93359375">SGroup:
+<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n19">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="100.0" width="700.0" x="5338.9074072455205" y="430.63295305861595"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="88.796875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="115.720703125" x="292.1396484375" xml:space="preserve" y="5.6015625">
+1) Властивості:
+
+	- Group **Groups;
+	- int captain;
+	- int size;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n20">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="500.0" width="700.0" x="5338.9074072455205" y="530.632953058616"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="385.5859375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="334.5390625" x="182.73046875" xml:space="preserve" y="57.207031250000114">2) Методи:
+
+	- void resize(int newCaptain);
+
+	- SGroup();
+	- ~SGroup();
+
+	- void addGroup(Group *group);
+	- void removeGroup(Group *group);
+
+	- void setV(bool visible);
+	- void setVisible();
+
+	- void draw(Graphics &amp;graphics);
+	- void move(double dx, double dy, Graphics &amp;graphics);
+
+	- void drawTrail(Graphics &amp;graphics);
+	- void addList(Graphics &amp;graphics);
+
+	- int getSize();
+
+	- bool intersects(Group &amp;other);
+	- void findTheInterects(Shape **shapes, int size2);
+    
+	- void resize(double factor, Graphics &amp;graphics);
+
+	- std::ofstream &amp;write(std::ofstream &amp;os);<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n21">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="700.0" x="6161.532193565638" y="400.63295305861595"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="58.73828125" x="320.630859375" xml:space="preserve" y="5.93359375">Graphics:
+<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n22">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="100.0" width="700.0" x="6161.532193565638" y="430.63295305861595"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="74.6640625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="174.806640625" x="262.5966796875" xml:space="preserve" y="12.66796875">
+1) Властивості:
+
+	- sf::RenderWindow window;
+	- int r, g, b;<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n23">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="400.0" width="700.0" x="6161.532193565638" y="530.632953058616"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="258.390625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="525.982421875" x="87.0087890625" xml:space="preserve" y="70.8046875">2) Методи:
+
+	- Graphics(double width, double height, const char* window_name);
+	- void job_information();
+	- void draw(const sf::Text&amp; drawable);
+
+	- bool open();
+	- void clear();
+	- void display();
+	- void close();
+
+	- bool pollEvent(sf::Event&amp; event);
+
+	- void setColor(int r, int g, int b);
+	- void drawSegment(double x1, double y1, double x2, double y2);
+	- void drawCircle(double x, double y, double radius);
+	- void drawRectangle(double x1, double y1, double x2, double y2);
+	- void drawTriangle(double x1, double y1, double x2, double y2, double x3, double y3); 
+<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+  </graph>
+  <data key="d7">
+    <y:Resources/>
+  </data>
+</graphml>
